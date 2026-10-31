@@ -34,8 +34,8 @@ jobs:
           cp index.html _site/index.html
           gh release download model-v1 \
             --repo "$GITHUB_REPOSITORY" \
-            --pattern "campus.glb" \
-            --dir _site
+            --pattern "*.glb" \
+            --output _site/campus.glb
           curl --fail --location --retry 3 \
             "https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js" \
             --output _site/model-viewer.min.js
